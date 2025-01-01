@@ -25,7 +25,7 @@ const HeroHome = () => {
                 <h1 className='font-[400]  pr-1 text-[#1D1F2C]'>Happy Customer</h1>
         </div>
 
-        <div className='font-semibold py-6 text-[64px] xl:leading-[80px] leading-none text-center'>
+        <div className='font-semibold text-[64px]  py-6 xl:leading-[80px] leading-none text-center'>
         <div className='flex items-center gap-[2px]'>
         Transform with 
         <div className='relative inline-block  text-[#3093FD] max-w-[354px] min-h-[85px]'>
