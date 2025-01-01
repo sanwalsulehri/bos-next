@@ -15,10 +15,10 @@ const HeroHome = () => {
     <div className='py-14 max-w-[1200px] text-[#161721] px-2 mx-auto flex flex-col items-center gap-4'>
        <div className='max-w-[840px] mx-auto'>
         <div className='bg-[#EBEEF1] w-fit mx-auto py-1.5 px-2 rounded-full flex items-center gap-3'>
-            <div class="flex -space-x-2">
+            <div class="flex -space-x-2 group">
                 {[girl,boy,girl2,boy2].map((img,idx)=>{
                     return(
-                        <Image src={img} key={idx} className='border w-6 h-6 rounded-full object-cover border-white' alt='imgs' />
+                        <Image src={img} key={idx} className='border group-hover:z-[999] w-6 h-6 rounded-full object-cover border-white' alt='imgs' />
                     )
                 })}
             </div>
