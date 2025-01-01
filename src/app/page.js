@@ -1,8 +1,11 @@
 import React from 'react'
+import Tools from './components/Tools'
 
 const page = () => {
   return (
-    <div>let's start man</div>
+    <>
+    <Tools />
+    </>
   )
 }
 
