@@ -16,7 +16,7 @@ const page = () => {
         <div>
           <div className="flex flex-col py-16 md:px-0 px-3 max-w-xl mx-auto items-center p-8 bg-gray-100">
             <h1 className="md:text-4xl text-2xl font-bold text-center mb-4">Go Beyond the Basics</h1>
-            <p className="text-lg text-gray-700 text-center">
+            <p className="text-lg text-gray-700   text-center">
               We’ve thought of everything to make sure you have the tools to take your CRM to the next level.
             </p>
           </div>
