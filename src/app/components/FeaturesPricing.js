@@ -68,7 +68,7 @@ const FeaturesPricing = () => {
 
   return (
     <div className="max-w-[1200px] mx-auto">
-      <h1 className="text-[#1D1F2C] text-center font-medium text-[32px] md:text-[42px]">
+      <h1 className="text-[#1D1F2C] mb-10 text-center font-medium text-[32px] md:text-[42px]">
         Compare all features
       </h1>
       {/* Pricing Plans */}

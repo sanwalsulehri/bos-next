@@ -6,6 +6,7 @@ import TextCard from './components/TextCard'
 import SvgGear from './components/svgs/gear'
 import Step from './components/Step'
 import Testimonial from './components/Testimonial'
+import Footer from './components/Footer'
 const page = () => {
   return (
     <>
@@ -34,6 +35,7 @@ const page = () => {
           <Step />
         </div>
         <Testimonial />
+        <Footer />
       </div>
     </>
   )
