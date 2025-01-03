@@ -233,7 +233,11 @@ const Essential = () => {
     <button className="text-lg font-medium text-gray-900 transition-colors hover:text-blue-500">View full feature list</button>
   </div>
   </div>
+
+
+
   )
+  
 }
 
 export default Essential
