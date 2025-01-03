@@ -3,7 +3,7 @@ import React from "react";
 const Tools = () => {
   return (
     <div>
-      <div className="px-6 py-10  w-[100%] lg:w-[80%] mx-auto">
+      <div className="px-6 py-10  w-[100%] md:max-w-7xl mx-4 md:mx-auto">
         <p className="text-center mx-auto p-2 bg-[#E6F2FF] w-[120px] rounded-full text-[#3093FD] mb-6 ">FEATURES</p>
         <h1 className="text-4xl font-semibold text-center mb-12">
           The only tool you need to<br></br> manage team from anywhere
