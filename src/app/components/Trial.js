@@ -7,7 +7,7 @@ import image from '../assets/image.png'
 const CTASection = () => {
     
     return (
-      <div   className=" bg-cover  md:mx-auto mx-4  bg bg-center rounded-[25px] relative max-w-7xl  py-10 min-h-[110vh] md:min-h-[414px]">
+      <div   className=" bg-cover  md:mx-auto mx-4 md:px-24  bg bg-center rounded-[25px] relative max-w-7xl  py-20 min-h-[110vh] md:min-h-[414px]">
         <div className="container relative z-[999] mx-auto  flex flex-col md:flex-row items-center justify-between">
           {/* Left content */}
           <div className="lg:max-w-md text-center lg:text-left   w-[100%]">
@@ -34,7 +34,7 @@ const CTASection = () => {
             <img 
               src="/img/phone.png"  
               alt="Professional using phone" 
-              className="h-[435px] lg:h-[532px] shrink-0"
+              className="md:h-[435px] h-[300px] lg:h-[532px] shrink-0"
             />
           </div>
 
