@@ -4,11 +4,11 @@ const Agency = () => {
   return (
     
     
-    <div className="bg-gray-100 p-2">
+    <div className="bg-gray-100 p-0 md:p-2">
   
-  <div className="mx-auto max-w-4xl px-4 pt-16 text-center">
+  <div className="mx-4 md:mx-auto md:max-w-7xl px-2 pt-16 text-center">
     
-    <h1 className="mb-4 text-[26px] md:text-[30px] lg:text-[40px] font-semibold leading-[48px] text-gray-900">
+    <h1 className="mb-4 text-[28px] md:text-[40px] lg:text-[48px] font-semibold md:leading-[56px] text-gray-900">
       Your Agency's Scalable<br />
       Growth Starts Here
     </h1>

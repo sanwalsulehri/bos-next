@@ -67,12 +67,12 @@ const FeaturesPricing = () => {
     );
 
   return (
-    <div className="max-w-[1200px] mx-auto">
+    <div className="mx-4 md:max-w-7xl md:mx-auto">
       <h1 className="text-[#1D1F2C] mb-10 text-center font-medium text-[32px] md:text-[42px]">
         Compare all features
       </h1>
       {/* Pricing Plans */}
-      <div className="grid grid-cols-3 bg-white p-6 pb-0 rounded-t-[20px] gap-8 max-w-4xl ml-auto">
+      <div className=" grid-cols-3 hidden md:grid bg-white p-6 pb-0 rounded-t-[20px] gap-8 max-w-4xl ml-auto">
         {pricingData.plans.map((plan, index) => (
           <div key={index}>
             <h2 className="text-[#3093FD] text-[20px] font-medium mb-6">{plan.name}</h2>
@@ -91,7 +91,7 @@ const FeaturesPricing = () => {
       {/* Features Table */}
       <div className="mx-auto rounded-l-[20px] rounded-b-[20px] bg-white py-6">
         <div className="mb-6 px-4 border-b border-[#F6F8FA] pb-5 flex items-center gap-2">
-        <div className="border-t w-full px-6 flex items-center gap-4 sm:justify-normal justify-between py-4  ">
+        <div className=" w-full px-6 flex items-center gap-4 sm:justify-normal justify-between py-4  ">
             <h1 className="text-[#1D1F2C] text-[20px] sm:text-[24px] font-medium">General </h1>
             <div className="w-[36px] h-[36px] bg-[#E6F2FF] rounded-full flex items-center justify-center">
             <svg width="14" height="2" viewBox="0 0 14 2" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -105,7 +105,7 @@ const FeaturesPricing = () => {
         <div className="space-y-4 mb-10 px-4">
           {pricingData.features.map((feature, index) => (
             <div key={index} className="grid sm:grid-cols-4 sm:gap-0 gap-4 divide-y items-center">
-              <span className="text-[#4A4C56] sm:bg-transparent bg-[#F6F8FA] rounded-[6px] sm:rounded-none sm:p-0 p-2.5 font-medium">{feature.name}</span>
+              <span className="text-[#4A4C56] sm:bg-transparent bg-[#F6F8FA] rounded-[6px] sm:rounded-none sm:p-0 p-3.5 font-medium">{feature.name}</span>
               {feature.values.map((value, valueIndex) => (
                 <div key={valueIndex} className="flex sm:justify-center">
                   {renderFeatureValue(value)}
@@ -116,7 +116,7 @@ const FeaturesPricing = () => {
         </div>
        {["Time tracking","Task & Project","Sales & Budgeting","Custom Fields","Invoicing"].map((label,idx)=>{
         return(
-            <div key={idx} className="border-t w-full px-6 flex items-center gap-4 sm:justify-normal justify-between py-4  ">
+            <div key={idx} className="border-t border-[#F6F8FA] w-full px-6 flex items-center gap-4 sm:justify-normal justify-between py-4  ">
             <h1 className="text-[#1D1F2C] text-[20px] sm:text-[24px] font-medium">{label}</h1>
             <div className="w-[36px] h-[36px] bg-[#E6F2FF] rounded-full flex items-center justify-center">
             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">

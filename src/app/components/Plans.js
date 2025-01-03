@@ -31,8 +31,8 @@ const Plans = () => {
   ];
 
   return (
-    <div className="py-28 max-w-[1200px] px-2 mx-auto">
-      <h1 className="text-[#1D1F2C] text-center font-medium text-[32px] md:text-[42px]">
+    <div className="py-28 mx-4 md:max-w-7xl px-2 md:mx-auto">
+      <h1 className="text-[#1D1F2C] text-center font-medium text-[28px] md:text-[42px]">
         Included in all plans
       </h1>
 
@@ -40,7 +40,7 @@ const Plans = () => {
         {cards.map((card) => (
           <div
             key={card.id}
-            className="mt-12 w-full rounded-3xl bg-white p-8 text-center"
+            className="mt-12 w-full rounded-3xl bg-white p-4 md:p-8 text-center"
           >
             {/* Icon */}
             <div className="mx-auto mb-6 flex h-[60px] w-[60px] items-center justify-center rounded-full bg-blue-50">
@@ -51,7 +51,7 @@ const Plans = () => {
               {card.title}
             </h3>
             {/* Description */}
-            <p className="text-[18px] leading-7 text-[#4A4C56]">
+            <p className="md:text-[18px] text-[16px] leading-7 text-[#4A4C56]">
               {card.description}
             </p>
           </div>
