@@ -30,7 +30,7 @@ const HeroHome = () => {
         Transform with 
         <div className='relative inline-block   text-[#3093FD] max-w-[196px] sm:max-w-[354px] min-h-[85px]'>
             <Image src={rectangle} className='object-cover object-center' alt='bg' />
-            <h1 className='absolute inset-0 '>Work Force</h1>
+            <h1 className='absolute inset-0 z-0 '>Work Force</h1>
         </div>
         </div>
         <h1 className='leading-none md:mt-0 -mt-6'>Management System</h1>
