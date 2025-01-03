@@ -12,12 +12,4 @@
     display: flex;
 }
 
-.bg{
-    background-image: url(./assets/image.png);
-}
-
-@media (max-width: 768px) {
-    .bg{
-        background-image: url(./assets/image1.png);
-    }
-}
+ 
