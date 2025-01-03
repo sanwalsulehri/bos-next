@@ -1,21 +1,20 @@
 import React from 'react';
 
-const Step = () => {
+const Step = ({heading, description, border}) => {
     return (
         <div className="flex flex-col md:gap-20 gap-8 lg:flex-row items-center lg:items-start justify-between  md:p-8 p-0 rounded-lg  ">
         {/* Left Section */}
         <div className="lg:w-1/2 text-center lg:text-left md:px-0 px-3">
           <h2 className="text-3xl text-left max-w-sm font-semibold text-gray-900 mb-4">
-            Coordinate Projects  and Team Availability
+            {heading}
           </h2>
           <p className="text-gray-600 text-left max-w-md leading-relaxed">
-            Know where you stand even before the project wrap-up. Get live insights on costs, revenue,
-            and margins to make smarter moves along the way.
+            {description}
           </p>
         </div>
   
         {/* Right Section */}
-        <div className="lg:w-1/2 bg-[#ECF1FA]   lg:mt-0 p-5 md:p-10 rounded-2xl  border-l-2 border-[#3093FD] shadow-sm">
+        <div className={`lg:w-1/2 bg-[#ECF1FA]   lg:mt-0 p-5 md:p-10 rounded-2xl  ${border === 'left' ? 'border-l-2 border-[#3093FD]' : 'md:border-l-2 border-r-2 md:border-r-0 border-[#3093FD]'} shadow-sm`}>
           <h3 className="text-sm font-medium text-gray-600 mb-4">Budget</h3>
           <div className=" px-6 p-6 rounded-xl max-w-sm bg-white gap-4">
           <div className="mb-4">
