@@ -2,7 +2,7 @@ import React from 'react'
 
 const Essential = () => {
   return (
-    <div className='grid grid-cols-1  mx-4 md:grid-cols-2 lg:grid-cols-3 md:max-w-7xl md:mx-auto mt-[50px]'>
+    <div className='grid grid-cols-1  mx-4 md:grid-cols-2 gap-10 lg:grid-cols-3 md:max-w-6xl md:mx-auto mt-[50px]'>
   <div className="w-[100%] md:w-[380px] rounded-3xl border border-gray-200 bg-white p-8 mt-[20px] lg:mt-[0px]">
     
     <h2 className="mb-8 text-2xl font-medium text-blue-500 ">Essential</h2>

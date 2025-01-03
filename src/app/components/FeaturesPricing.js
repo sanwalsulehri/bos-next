@@ -67,22 +67,22 @@ const FeaturesPricing = () => {
     );
 
   return (
-    <div className="mx-4 md:max-w-7xl md:mx-auto">
+    <div className="mx-4 md:max-w-7xl md:block hidden md:mx-auto">
       <h1 className="text-[#1D1F2C] mb-10 text-center font-medium text-[32px] md:text-[42px]">
         Compare all features
       </h1>
       {/* Pricing Plans */}
-      <div className=" grid-cols-3 hidden md:grid bg-white p-6 pb-0 rounded-t-[20px] gap-8 max-w-4xl ml-auto">
+      <div className=" grid-cols-3 hidden md:grid bg-white rounded-t-[20px] px-8 py-4 gap-6 max-w-4xl ml-auto">
         {pricingData.plans.map((plan, index) => (
-          <div key={index}>
-            <h2 className="text-[#3093FD] text-[20px] font-medium mb-6">{plan.name}</h2>
-            <div className="mb-4">
+          <div key={index} className="">
+            <h2 className="text-[#3093FD] text-[20px]  pt-3 font-medium ">{plan.name}</h2>
+            <div className="mb-2 ">
               <div className="flex items-baseline">
                 <span className="text-[36px] font-semibold text-[#070707]">{plan.price}</span>
                 <span className="text-[#070707] text-[16px] font-semibold ml-2">{plan.unit}</span>
               </div>
             </div>
-            <div className="border-b border-gray-200 pb-4">
+            <div className="border-b  border-gray-200 pb-4">
               <p className="text-[#4A4C56]">{plan.seats}</p>
             </div>
           </div>
@@ -90,21 +90,21 @@ const FeaturesPricing = () => {
       </div>
       {/* Features Table */}
       <div className="mx-auto rounded-l-[20px] rounded-b-[20px] bg-white py-6">
-        <div className="mb-6 px-4 border-b border-[#F6F8FA] pb-5 flex items-center gap-2">
-        <div className=" w-full px-6 flex items-center gap-4 sm:justify-normal justify-between py-4  ">
+        <div className="mb-6 px-6 border-b border-[#F6F8FA] pb-5 flex items-center gap-2">
+          <div className=" w-full  flex items-center gap-4 sm:justify-normal justify-between py-4  ">
             <h1 className="text-[#1D1F2C] text-[20px] sm:text-[24px] font-medium">General </h1>
             <div className="w-[36px] h-[36px] bg-[#E6F2FF] rounded-full flex items-center justify-center">
-            <svg width="14" height="2" viewBox="0 0 14 2" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M13 1L1 1" stroke="#28303F" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-</svg>
+              <svg width="14" height="2" viewBox="0 0 14 2" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M13 1L1 1" stroke="#28303F" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+              </svg>
 
 
             </div>
+          </div>
         </div>
-        </div>
-        <div className="space-y-4 mb-10 px-4">
+        <div className="space-y-4 mb-10 px-6">
           {pricingData.features.map((feature, index) => (
-            <div key={index} className="grid sm:grid-cols-4 sm:gap-0 gap-4 divide-y items-center">
+            <div key={index} className="grid sm:grid-cols-4 sm:gap-0 gap-4   items-center">
               <span className="text-[#4A4C56] sm:bg-transparent bg-[#F6F8FA] rounded-[6px] sm:rounded-none sm:p-0 p-3.5 font-medium">{feature.name}</span>
               {feature.values.map((value, valueIndex) => (
                 <div key={valueIndex} className="flex sm:justify-center">
@@ -114,21 +114,21 @@ const FeaturesPricing = () => {
             </div>
           ))}
         </div>
-       {["Time tracking","Task & Project","Sales & Budgeting","Custom Fields","Invoicing"].map((label,idx)=>{
-        return(
+        {["Time tracking", "Task & Project", "Sales & Budgeting", "Custom Fields", "Invoicing"].map((label, idx) => {
+          return (
             <div key={idx} className="border-t border-[#F6F8FA] w-full px-6 flex items-center gap-4 sm:justify-normal justify-between py-4  ">
-            <h1 className="text-[#1D1F2C] text-[20px] sm:text-[24px] font-medium">{label}</h1>
-            <div className="w-[36px] h-[36px] bg-[#E6F2FF] rounded-full flex items-center justify-center">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M12 6V18M18 12L6 12" stroke="#28303F" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-</svg>
+              <h1 className="text-[#1D1F2C] text-[20px] sm:text-[24px] font-medium">{label}</h1>
+              <div className="w-[36px] h-[36px] bg-[#E6F2FF] rounded-full flex items-center justify-center">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M12 6V18M18 12L6 12" stroke="#28303F" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
 
+              </div>
             </div>
-        </div>
-        )
-       })}
+          )
+        })}
       </div>
-      
+
     </div>
   );
 };

@@ -5,6 +5,7 @@ import Agency from '../components/Agency'
 import Essential from '../components/Essential'
 import Navbar from '../components/Navbar'
 import Footer from '../components/Footer'
+import FeatureComparison from '../components/FeatureComparison'
 
 const page = () => {
   return (
@@ -15,6 +16,7 @@ const page = () => {
         <Essential />
         <Plans />
         <FeaturesPricing />
+        <FeatureComparison />
         <Footer />
     </div>
     </>
