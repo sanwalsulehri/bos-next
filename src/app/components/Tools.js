@@ -122,8 +122,8 @@ const Tools = () => {
             </p>
             <div className="space-y-4">
             <div className="rounded-lg shadow-lg group relative min-h-[66px] ">
-                <div className="border border-dashed border-[#3993F6] rounded-lg absolute top-0 left-0 w-full h-full"></div>
-              <div className="flex items-center group-hover:rotate-[5deg] group-hover:bg-[#3993F6] group-hover:text-white transition ease-in-out duration-500 rounded-lg gap-4 p-2 w-full h-full bg-white absolute ">
+                <div className="rounded-lg absolute top-0 left-0 w-full h-full"></div>
+              <div className="flex items-center group-hover:scale-[1.02]  transition ease-in-out duration-200 rounded-lg gap-4 p-2 w-full h-full bg-white absolute ">
                 <div className="">
                 <img
               src="./img/Ellipse 16.png"
@@ -135,13 +135,14 @@ const Tools = () => {
                 <p className="text-[14px font-semibold">
                 John P.
                 </p>
-                <p className="text-[#706F6F] text-[14px group-hover:text-white ">Clients wants to book a service</p>
+                <p className="text-[#706F6F] text-[14px  ">Clients wants to book a service</p>
                 </div>
               </div>
               </div>
               <div className="rounded-lg shadow-lg group relative min-h-[66px] ">
-                <div className="border border-dashed border-[#3993F6] rounded-lg absolute top-0 left-0 w-full h-full"></div>
-              <div className="flex items-center group-hover:rotate-[5deg] group-hover:bg-[#3993F6] group-hover:text-white transition ease-in-out duration-500 rounded-lg gap-4 p-2 w-full h-full bg-white absolute ">
+                               <div className="rounded-lg absolute top-0 left-0 w-full h-full"></div>
+
+              <div className="flex items-center group-hover:scale-[1.02] transition ease-in-out duration-200 rounded-lg gap-4 p-2 w-full h-full bg-white absolute ">
                 <div className="">
                 <img
               src="./img/Ellipse 16 (2).png"
@@ -153,13 +154,14 @@ const Tools = () => {
                 <p className="text-[14px font-semibold">
                 Johanna K.
                 </p>
-                <p className="text-[#706F6F] text-[14px group-hover:text-white ">Client handover key</p>
+                <p className="text-[#706F6F] text-[14px  ">Client handover key</p>
                 </div>
               </div>
               </div>
               <div className="rounded-lg shadow-lg group relative min-h-[66px] ">
-                <div className="border border-dashed border-[#3993F6] rounded-lg absolute top-0 left-0 w-full h-full"></div>
-              <div className="flex items-center group-hover:rotate-[5deg] group-hover:bg-[#3993F6] group-hover:text-white transition ease-in-out duration-500 rounded-lg gap-4 p-2 w-full h-full bg-white absolute ">
+                               <div className="rounded-lg absolute top-0 left-0 w-full h-full"></div>
+
+              <div className="flex items-center group-hover:scale-[1.02] transition ease-in-out duration-200 rounded-lg gap-4 p-2 w-full h-full bg-white absolute ">
                 <div className="">
                 <img
               src="./img/Ellipse 16 (1).png"
@@ -171,7 +173,7 @@ const Tools = () => {
                 <p className="text-[14px font-semibold">
                 Sarah A.
                 </p>
-                <p className="text-[#706F6F] text-[14px group-hover:text-white ">Accepted a new project</p>
+                <p className="text-[#706F6F] text-[14px  ">Accepted a new project</p>
                 </div>
               </div>
               </div>
