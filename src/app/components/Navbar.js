@@ -73,14 +73,17 @@ const Navbar = () => {
 
 
     {/* drawer */}
-    <div className={`fixed top-0 h-screen w-full left-0 ${drawer ? 'translate-x-0' : '-translate-x-full'} transition-all duration-1000  `}>
+    <div className={`fixed top-0 z-[9999999] h-screen w-full left-0 ${drawer ? 'translate-x-0' : '-translate-x-full'} transition-all duration-1000  `}>
     <div onClick={drawerHandler} className='bg-black/30 fixed h-screen w-full top-0 left-0'></div>
 
-    <div className='bg-white transition-all duration-1000 w-[90%] sm:w-[70%] h-screen fixed top-0 left-0'>
-    <div className='flex flex-col px-6 py-10 gap-4 xl:gap-8'>
+    <div onClick={drawerHandler} className='bg-white z-[99999999999999]  transition-all duration-1000 w-[100%] sm:w-[70%] h-screen fixed top-0 left-0'>
+        <div className='absolute right-5 top-5'>
+        <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 15 15"><path fill="currentColor" d="M3.64 2.27L7.5 6.13l3.84-3.84A.92.92 0 0 1 12 2a1 1 0 0 1 1 1a.9.9 0 0 1-.27.66L8.84 7.5l3.89 3.89A.9.9 0 0 1 13 12a1 1 0 0 1-1 1a.92.92 0 0 1-.69-.27L7.5 8.87l-3.85 3.85A.92.92 0 0 1 3 13a1 1 0 0 1-1-1a.9.9 0 0 1 .27-.66L6.16 7.5L2.27 3.61A.9.9 0 0 1 2 3a1 1 0 0 1 1-1c.24.003.47.1.64.27"/></svg>
+        </div>
+    <div className='flex flex-col px-6 py-10 gap-4 xl:gap-8 sm:mt-0 mt-5'>
             {links.map((link,idx)=>{
                 return(
-                    <div className='flex  hover:opacity-60 transition-all duration-100 cursor-pointer gap-1 sm:text-[20px] font-[400]' key={idx}>{link.link}
+                    <div className='flex  hover:opacity-60 transition-all duration-100 cursor-pointer sm:justify-normal justify-between gap-1 sm:text-[20px] font-[400]' key={idx}>{link.link}
                    <Image src={link.icon} className={`${idx === 1 ? 'hidden' : 'block'}`} alt='icon' />
                     </div>
                 )
