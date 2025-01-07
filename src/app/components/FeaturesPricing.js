@@ -1,6 +1,18 @@
-import React from "react";
+'use client'
+import React, { useState } from "react";
 
 const FeaturesPricing = () => {
+  // State to manage visibility of sections
+  const [visibleSections, setVisibleSections] = useState({});
+
+  // Toggle section visibility
+  const toggleSection = (section) => {
+    setVisibleSections((prev) => ({
+      ...prev,
+      [section]: !prev[section],
+    }));
+  };
+
   // Data object containing all plans and features
   const pricingData = {
     plans: [
@@ -11,15 +23,15 @@ const FeaturesPricing = () => {
     features: [
       {
         name: "Web, Desktop & Mobile app",
-        values: [true, "whiteIcon", true], // Specific value for white icon
+        values: [true, "whiteIcon", true],
       },
       {
         name: "Dark/light theme",
-        values: [true, true, "whiteIcon"], // White icon for the last plan
+        values: [true, true, "whiteIcon"],
       },
       {
         name: "Multiple currencies",
-        values: ["whiteIcon", true, true], // White icon for the first plan
+        values: ["whiteIcon", true, true],
       },
       {
         name: "Recycle bin retention",
@@ -36,10 +48,11 @@ const FeaturesPricing = () => {
     ],
   };
 
+  const sectionLabels = ["General", "Time tracking", "Task & Project", "Sales & Budgeting", "Custom Fields", "Invoicing"];
+
   // Utility to render icons or text based on the feature type
   const renderFeatureValue = (value) =>
     value === true ? (
-      // Green check icon
       <svg className="h-5 w-5 mt-4 text-green-500" viewBox="0 0 20 20" fill="currentColor">
         <path
           fillRule="evenodd"
@@ -48,7 +61,6 @@ const FeaturesPricing = () => {
         />
       </svg>
     ) : value === "whiteIcon" ? (
-      // White tick icon
       <svg
         width="20"
         className="mt-4"
@@ -71,64 +83,45 @@ const FeaturesPricing = () => {
       <h1 className="text-[#1D1F2C] mb-10 text-center font-medium text-[32px] md:text-[42px]">
         Compare all features
       </h1>
-      {/* Pricing Plans */}
-      <div className=" grid-cols-3 hidden md:grid bg-white rounded-t-[20px] px-8 py-4 gap-6 max-w-4xl ml-auto">
-        {pricingData.plans.map((plan, index) => (
-          <div key={index} className="">
-            <h2 className="text-[#3093FD] text-[20px]  pt-3 font-medium ">{plan.name}</h2>
-            <div className="mb-2 ">
-              <div className="flex items-baseline">
-                <span className="text-[36px] font-semibold text-[#070707]">{plan.price}</span>
-                <span className="text-[#070707] text-[16px] font-semibold ml-2">{plan.unit}</span>
+      <div className="mx-auto rounded-l-[20px] rounded-b-[20px] bg-white py-6">
+        {sectionLabels.map((label, idx) => (
+          <div key={idx} className="border-t border-[#F6F8FA] w-full px-6">
+            <div
+              className="flex items-center gap-4 sm:justify-between py-4 cursor-pointer"
+              onClick={() => toggleSection(label)}
+            >
+              <h1 className="text-[#1D1F2C] text-[20px] sm:text-[24px] font-medium">{label}</h1>
+              <div className="w-[36px] h-[36px] bg-[#E6F2FF] rounded-full flex items-center justify-center">
+                {visibleSections[label] ? (
+                  <svg width="14" height="2" viewBox="0 0 14 2" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M1 1L13 1" stroke="#28303F" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+                  </svg>
+                ) : (
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M12 6V18M18 12L6 12" stroke="#28303F" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+                  </svg>
+                )}
               </div>
             </div>
-            <div className="border-b  border-gray-200 pb-4">
-              <p className="text-[#4A4C56]">{plan.seats}</p>
-            </div>
+            {visibleSections[label] && (
+              <div className="space-y-4 mb-10 px-6">
+                {pricingData.features.map((feature, index) => (
+                  <div key={index} className="grid sm:grid-cols-4 sm:gap-0 gap-4 items-center">
+                    <span className="text-[#4A4C56] sm:bg-transparent bg-[#F6F8FA] rounded-[6px] sm:rounded-none sm:p-0 p-3.5 font-medium">
+                      {feature.name}
+                    </span>
+                    {feature.values.map((value, valueIndex) => (
+                      <div key={valueIndex} className="flex sm:justify-center">
+                        {renderFeatureValue(value)}
+                      </div>
+                    ))}
+                  </div>
+                ))}
+              </div>
+            )}
           </div>
         ))}
       </div>
-      {/* Features Table */}
-      <div className="mx-auto rounded-l-[20px] rounded-b-[20px] bg-white py-6">
-        <div className="mb-6 px-6 border-b border-[#F6F8FA] pb-5 flex items-center gap-2">
-          <div className=" w-full  flex items-center gap-4 sm:justify-normal justify-between py-4  ">
-            <h1 className="text-[#1D1F2C] text-[20px] sm:text-[24px] font-medium">General </h1>
-            <div className="w-[36px] h-[36px] bg-[#E6F2FF] rounded-full flex items-center justify-center">
-              <svg width="14" height="2" viewBox="0 0 14 2" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M13 1L1 1" stroke="#28303F" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
-              </svg>
-
-
-            </div>
-          </div>
-        </div>
-        <div className="space-y-4 mb-10 px-6">
-          {pricingData.features.map((feature, index) => (
-            <div key={index} className="grid sm:grid-cols-4 sm:gap-0 gap-4   items-center">
-              <span className="text-[#4A4C56] sm:bg-transparent bg-[#F6F8FA] rounded-[6px] sm:rounded-none sm:p-0 p-3.5 font-medium">{feature.name}</span>
-              {feature.values.map((value, valueIndex) => (
-                <div key={valueIndex} className="flex sm:justify-center">
-                  {renderFeatureValue(value)}
-                </div>
-              ))}
-            </div>
-          ))}
-        </div>
-        {["Time tracking", "Task & Project", "Sales & Budgeting", "Custom Fields", "Invoicing"].map((label, idx) => {
-          return (
-            <div key={idx} className="border-t border-[#F6F8FA] w-full px-6 flex items-center gap-4 sm:justify-normal justify-between py-4  ">
-              <h1 className="text-[#1D1F2C] text-[20px] sm:text-[24px] font-medium">{label}</h1>
-              <div className="w-[36px] h-[36px] bg-[#E6F2FF] rounded-full flex items-center justify-center">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M12 6V18M18 12L6 12" stroke="#28303F" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
-                </svg>
-
-              </div>
-            </div>
-          )
-        })}
-      </div>
-
     </div>
   );
 };
